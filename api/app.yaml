@@ -1,4 +1,4 @@
-service: starter-api
+service: silver-snakes-api
 runtime: custom
 env: flex
 

@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 
 class WishCreation extends Component {
-  state = {}
+  state = {
+    unit: true,
+    wishInput: ''
+  }
 
   handleChange = event => {
     event.preventDefault()
@@ -43,7 +46,7 @@ class WishCreation extends Component {
               years old!
             </div>
           </div>
-          <div className="child-hometown-illness">
+          <div className="child-hometown">
             <div>
               My hometown is{' '}
               <input
@@ -53,35 +56,92 @@ class WishCreation extends Component {
                 placeholder="enter your hometown"
                 value={this.state.hometown}
                 onChange={this.handleChange}
-              />{' '}
-              and I have{' '}
-              <input
-                name="child-illness"
+              />
+              {'!'}
+            </div>
+          </div>
+          <div className="child-wish">
+            <div className="go-somewhere">
+              <button
+                name="wish"
+                value="GO"
+                onClick={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+                onTouchStart={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+              >
+                IMG 1
+              </button>
+              <div>GO Somewhere!</div>
+            </div>
+            <div className="meet-someone">
+              <button
+                name="wish"
+                value="MEET"
+                onClick={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+                onTouchStart={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+              >
+                {' '}
+                IMG 2
+              </button>
+              <div> MEET Someone!</div>
+            </div>
+            <div className="be-someone">
+              <button
+                name="wish"
+                value="BE"
+                onClick={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+                onTouchStart={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+              >
+                IMG 3
+              </button>
+              <div>BE Someone!</div>
+            </div>
+            <div className="see-something">
+              <button
+                name="wish"
+                value="SEE"
+                onClick={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+                onTouchStart={event => {
+                  event.preventDefault()
+                  this.handleChange(event)
+                }}
+              >
+                IMG 4
+              </button>
+              <div>SEE Something!</div>
+            </div>
+            <div className="wish-input">
+              <textarea
+                name="wishInput"
                 type="text"
                 required
-                placeholder="your illness"
-                value={this.state.illness}
+                placeholder="Tell us about your wish"
+                value={this.state.wishInput}
                 onChange={this.handleChange}
               />
             </div>
-            <div className="child-wish">
-              <div className="go-somewhere">
-                <button>IMG 1</button>
-                <div>GO Somewhere!</div>
-              </div>
-
-              <div className="meet-someone">
-                <button> IMG 2</button>
-                <div> MEET Someone!</div>
-              </div>
-              <div className="be-someone">
-                <button>IMG 3</button>
-                <div>BE Someone!</div>
-              </div>
-              <div className="see-something">
-                <button>IMG 4</button>
-                <div>SEE Something!</div>
-              </div>
+            <div className="wish-submit">
+              <button>Submit Your Wish</button>
             </div>
           </div>
         </div>

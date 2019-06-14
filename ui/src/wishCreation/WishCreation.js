@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 
 class WishCreation extends Component {
-  state = {
-    name: '',
-    age: '',
-    hometown: '',
-    illness: '',
-    wishType: '',
-    wishDetails: ''
+  state = {}
+
+  handleChange = event => {
+    event.preventDefault()
+    const [value, name] = [event.target.value, event.target.name]
+    this.setState({
+      [name]: value
+    })
   }
+
   render() {
     return (
       <div>
@@ -20,14 +22,47 @@ class WishCreation extends Component {
         <div>
           <div className="child-name-age">
             <div>
-              My name is <input placeholder="enter your name" /> and I am{' '}
-              <input placeholder="your age" /> years old!
+              My name is{' '}
+              <input
+                name="child-name"
+                type="text"
+                required
+                placeholder="enter your name"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />{' '}
+              and I am{' '}
+              <input
+                name="child-age"
+                type="text"
+                required
+                placeholder="your age"
+                value={this.state.age}
+                onChange={this.handleChange}
+              />{' '}
+              years old!
             </div>
           </div>
           <div className="child-hometown-illness">
             <div>
-              My hometown is <input placeholder="enter your hometown" /> and I
-              have <input placeholder="your illness" />
+              My hometown is{' '}
+              <input
+                name="child-hometown"
+                type="text"
+                required
+                placeholder="enter your hometown"
+                value={this.state.hometown}
+                onChange={this.handleChange}
+              />{' '}
+              and I have{' '}
+              <input
+                name="child-illness"
+                type="text"
+                required
+                placeholder="your illness"
+                value={this.state.illness}
+                onChange={this.handleChange}
+              />
             </div>
             <div className="child-wish">
               <div className="go-somewhere">

@@ -7,7 +7,7 @@ const Wish = new Schema({
   details:  { type: String, required: true },
   status:  { type: String, default: "new" },
   sponsor: { type: String, default: null},
-  childId:  { type: Number, required: true }
+  superStarID:  { type: Number, required: true }
   }, {timestamps: true}
 )
 

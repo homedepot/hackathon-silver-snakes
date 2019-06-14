@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './WishCreation.css'
 
 class WishCreation extends Component {
   state = {
@@ -15,17 +16,36 @@ class WishCreation extends Component {
 
   render() {
     return (
-      <div>
+      <div className="wish-creation-container">
         <div>
-          <h1>Hello</h1>
-          <div>Img 1</div>
-          <div>Img 2</div>
+          <div className="welcome-title">Hello!</div>
+          {/* <img
+            src="/wishCreation/Logo_MakeWish_Dark_Blue.png"
+            alt="Make-A-Wish Logo"
+            width="200"
+            height="185"
+          />
+
+          <a href="https://imgur.com/qFBWYr9">
+            <img
+              src="https://i.imgur.com/qFBWYr9.jpg?3"
+              title="source: imgur.com"
+            />
+          </a>
+
+          <img
+            src="/wishCreation/Logo_Galaxy_Colour_Dark_Blue.png"
+            alt="Galaxy Colour Logo"
+            width="200"
+            height="185"
+          /> */}
         </div>
         <div>
           <div className="child-name-age">
             <div>
               My name is{' '}
               <input
+                className="child-name-input"
                 name="child-name"
                 type="text"
                 required
@@ -35,6 +55,7 @@ class WishCreation extends Component {
               />{' '}
               and I am{' '}
               <input
+                className="child-age-input"
                 name="child-age"
                 type="text"
                 required
@@ -49,6 +70,7 @@ class WishCreation extends Component {
             <div>
               My hometown is{' '}
               <input
+                className="child-hometown-input"
                 name="child-hometown"
                 type="text"
                 required
@@ -60,6 +82,7 @@ class WishCreation extends Component {
             </div>
           </div>
           <div className="child-wish">
+            <div>I wish to:</div>
             <div className="go-somewhere">
               <button
                 name="wish"
@@ -131,6 +154,7 @@ class WishCreation extends Component {
             </div>
             <div className="wish-input">
               <textarea
+                className="wish-input-textarea"
                 name="wishInput"
                 type="text"
                 required

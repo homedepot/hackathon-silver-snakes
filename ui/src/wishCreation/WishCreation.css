@@ -1,3 +1,69 @@
-.wish-creation-container {
+body {
   background-color: #72ccd0;
+}
+
+.welcome-title {
+  font-size: 70px;
+}
+
+.wish-creation-container {
+  color: #2e3092;
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+}
+
+.child-name-age {
+  font-size: 30px;
+}
+
+.child-hometown {
+  font-size: 30px;
+}
+
+.child-wish {
+  font-size: 35px;
+}
+
+::placeholder {
+  color: #ec008c;
+  font-size: 25px;
+  font-weight: bold;
+  border-color: #0870b8;
+}
+
+.child-name-input {
+  padding: 12px;
+  width: 18%;
+  border-radius: 4px;
+  border: 3px solid #0870b8;
+  overflow: hidden;
+}
+
+.child-age-input {
+  padding: 12px;
+  width: 7%;
+  border-radius: 4px;
+  border: 3px solid #0870b8;
+  overflow: hidden;
+}
+
+.child-hometown-input {
+  padding: 12px;
+  width: 25%;
+  border-radius: 4px;
+  border: 3px solid #0870b8;
+  overflow: hidden;
+}
+
+.wish-input-textarea {
+  padding: 12px;
+  width: 50%;
+  border-radius: 4px;
+  border: 3px solid #0870b8;
+  overflow: hidden;
+}
+
+button {
+  background-color: #faea00;
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  font-size: 30px;
 }

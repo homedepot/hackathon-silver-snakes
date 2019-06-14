@@ -10,6 +10,8 @@ const LocalStrategy = require('passport-local').Strategy
 
 const index = require('./routes')
 const auth = require('./routes/auth')
+const wishes = require('./routes/wishes')
+const superstars = require('./routes/superstars')
 const cors = require('cors')
 
 const app = express()
@@ -51,6 +53,8 @@ require('./db/bootstrap-mongoose')
 
 app.use('/', index)
 app.use('/auth', auth)
+app.use('/wishes', wishes)
+app.use('/superstars', superstars)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

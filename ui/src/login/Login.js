@@ -19,10 +19,13 @@ class Login extends Component {
   createUser = async e => {
     e.preventDefault()
 
-    const { username, password } = this.state
+    const { username, password, firstName, lastName } = this.state
 
     try {
+      console.log('registering with server:', this.state);
       await axios.post(`${this.expressDomain}/auth/register`, {
+        firstName,
+        lastName,
         username,
         password
       })

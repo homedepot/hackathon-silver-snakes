@@ -3,8 +3,8 @@ const passport = require('passport')
 const Account = require('../db/Account')
 
 router.post('/register', function(req, res, next) {
-  console.log('registering user')
   const { username, firstName, lastName } = req.body
+  console.log('registering user:', username, firstName, lastName)
 
   Account.register(
     new Account({ username, firstName, lastName }),

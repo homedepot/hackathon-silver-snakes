@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 class WishCreation extends Component {
   state = {
-    unit: true,
     wishInput: ''
   }
 
